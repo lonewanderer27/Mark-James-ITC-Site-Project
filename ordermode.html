@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORDER SYSTEM - eCommerce Website [Intro to Computing by Mark James]</title>
+    <link rel="stylesheet" href="ordermode.css">
+    <!--THE STYLE.CSS IS FOR THIS HTML FILE-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+</head>
+<body>
+	<nav>
+        <a href="index.html" class="ihms-navbar" id="hover"><h1 class="ihms-navbar-h1">KAIJU</h1></a>
+        <ul>
+        	<li><a href="product.html" class="hover">PRODUCTS</a></li>
+            <li><a href="about.html" class="hover">ABOUT</a></li>
+            <li><a href="SHOP.html" class="hover">SHOP</a></li>
+        </ul>
+        <div class="burger">
+        	<div class="line1"></div>
+        	<div class="line2"></div>
+        	<div class="line3"></div>
+        </div>
+    </nav>
+
+    <div class="main">
+		<div class="main-1">
+			<h1 class="main-1-h1" title="LOGO">ORDER</h1>
+			<p class="main-1-p2">━━━━━━━━━━━━━━ SCROLL DOWN</p>
+		</div>
+	</div>
+
+	<div class="codegenerate" onchange="testing(this)">
+		<div class="codegenerate-1">
+			<p id="serial">ORDER NUMBER</p>
+        	<button onclick="myFunction()" id="generate">GENERATE</button>
+        	<script>
+            function myFunction(){
+                var chars = '1234567890000000000000000000ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+                serialLength = 8,
+                randomSerial = "",
+      
+                i, randomNumber;
+    
+                for (i = 0; i < serialLength; i = i + 1) {
+                	randomNumber = Math.floor(Math.random() * chars.length);
+                	randomSerial += chars.substring(randomNumber, randomNumber + 1);
+                }
+    
+                document.getElementById('serial').innerHTML = "KAIJU-" + randomSerial;
+                document.getElementById("generate").disabled=true;
+            }
+        	</script>
+		</div>
+
+    </div>
+
+	<div class="part-11">
+        <div class="part-11-1">
+            <h1 class="part-11-h1"></h1>
+            <p class="part-11-1-p1">Kindly input what you want to order. Remember to generate the code as well (which is from above). Fill up all of the information below. Thank you for ordering at KAIJU.<br><br></p>
+            <form action="https://sheetdb.io/api/v1/2ebarsg8whlws" method="POST" id="sheetdb-form">
+            <table style="width: 100%">
+                <tr>
+                    <td>NAME: <br>
+                        <input type="text" name="data[namefield]" placeholder="Your Name" id="nameid" /></td>
+                </tr>
+                <tr>
+                    <td>ADDRESS: <br>
+                        <input type="text" name="data[addressfield]" placeholder="Your Address" id="addid" /></td>
+                </tr>
+                <tr>
+                    <td>CODE GENERATED<br>
+                        <input type="text" name="data[codefield]" placeholder="Input Generated Code" id="codeid" /></td>
+                </tr>
+                <tr>
+                    <td>PRODUCT<br>
+                        <select name="data[productfield]" id="choices" />
+                        	<option value="---null---">[Choose products]</option>
+    						<option value="ALFAWOLF">ALFAWOLF</option>
+                    		<option value="AKIRA">AKIRA</option>
+                    		<option value="DUA">DUA</option>
+                    		<option value="BOT HAPPY">BOT HAPPY</option>
+                    		<option value="AXEL">AXEL</option>
+    					</select>
+    				</td>
+                </tr>
+                <tr>
+                    <td>REASON/COMMENT: <br>
+                        <input type="text" rows="3" cols="30" name="data[messagefield]" placeholder="Type the reason why" oninput="editReview()" id="reason" /></input></td>
+                </tr>
+                <tr>
+                    <td>[ALERT: ENSURE YOU PUT A PROPER EMAIL BEFORE SENDING!]</td>
+                </tr>
+                <tr>
+                    <td><button>SEND ORDER</button></td>
+                </tr>
+                <tr>
+                    <td>[Ensure that all information are real and proper.]</td>
+                </tr>
+            </table><br><br>
+            </form>
+            <hr>
+        </div>
+
+        <script>
+            var form = document.getElementById('sheetdb-form');
+            form.addEventListener("submit", e => {
+                e.preventDefault();
+                fetch(form.action, {
+                    method : "POST",
+                    body: new FormData(document.getElementById("sheetdb-form")),
+                }).then(
+                    response => response.json()
+                ).then((html) => {
+                alert("ORDER SUCCESSFUL! THANK YOU!")
+                });
+            });
+        </script>
+    </div>
+
+	<div class="part-11">
+        <div class="part-11-1">
+            <h1 class="part-11-h1"></h1>
+            <p class="part-12-1-p1"><!--<b>Made by MARK JAMES BONIFACIO<br><br>CONTACT<br></b>FACEBOOK----------------TWITTER----------------YOUTUBE <br><br><br><br>-->©KAIJUTEK INC. ALL RIGHTS RESERVED.-----------------PRIVACY POLICY-----------------TERMS OF USE<br><br><br><br>PHILIPPINES (ENGLISH)
+            </p>
+        </div>
+    </div>
+</body>
+</html>

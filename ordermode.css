@@ -1,0 +1,397 @@
+/*Part 1 - THE BODY & FONT*/
+
+body{
+    margin: 0;
+    padding: 0; 
+    -webkit-font-smoothing: antialiased;
+    font-size: 100%;
+    transition: 1.2s;
+    background: url('https://thumbs.gfycat.com/SimplisticMeanDuckling-max-1mb.gif'), linear-gradient(90deg, #16161D, #6B0772, #CF268A, #E65C9C, #FB8CAB);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: soft-light;
+    background-size: cover;
+    cursor: url(CustomCursorbyMark.gif), default;
+}
+
+::selection {
+  color: whitesmoke;
+  background: #FF2400;
+}
+
+@font-face {
+    font-family: 'jpn';
+    src: url(nicokaku_v1.ttf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'nm';
+    src: url(NightMachine.otf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'first';
+    src: url(Thedus-Wide.otf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'second';
+    src: url(Thedus-CondensedLight.otf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'yah2';
+    src: url(yah2.otf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'tfw';
+    src: url(TheFontWonder.otf);
+    font-weight: 100;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+/*Part 2 - THE NAVIGATION BAR*/
+
+nav{
+    background: transparent;
+    height: 10%;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .5s;
+    padding: -20px 10px;
+    z-index: 100000;
+}
+
+nav a{
+    color: whitesmoke;
+    font-size: calc(10px + 1.6vh);
+    padding: 7px 50px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: first;
+    transition: 0.8;
+    cursor: url(Pick.gif), default;
+}
+
+nav ul{
+    float: right;
+    margin-right: 10px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    cursor: url(Pick.gif), default;
+}
+
+.hover.active,.hover:hover{
+    background: whitesmoke;
+    transition: .5s;
+    color: #E3242B;
+}
+
+nav ul li a{
+    text-decoration: none;
+}
+
+.burger{
+    display: none;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: whitesmoke;
+    margin: 5px;
+}
+
+#hover.active,#hover:hover{
+    background: repeating-linear-gradient(-45deg, #355C7D 0%, #6C5B7B 20%, #6C5B7B 40%, #C06C84 60%, #F67280 80%, #F8B195 100%);
+    background-size: 400vh 400vh;
+    animation: slide 6s linear infinite forwards;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    transition: 0.8;
+}
+
+@media screen and (max-width: 920px){
+    nav ul li{
+        display: none;
+    }
+}
+
+@keyframes slide{
+    0%{
+        background-position-x: 0%;
+    }
+
+    100%{
+        background-position-x: 500vh;
+    }
+}
+
+/*Part 3 - HOME*/
+.main{
+    min-height: 100vh;
+    display: flex;
+    transition: 1.2s;
+    display: flex;
+    padding: 2px 2px 2px 2px;
+    background: transparent;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: soft-light;
+    background-size: cover;
+}
+
+.main-1{
+    background: transparent;
+    border-radius: 9px;
+    transition: .8s;
+    width: 65%;
+    height: 700%;
+    padding-bottom: 2%;
+    margin: auto;
+}
+
+.main-1-h1{
+    padding-left: 8%;
+    color: whitesmoke;
+    font-family: first;
+    font-size: calc(10px + 13vh);
+    transition: .8s;
+    margin-bottom: 7%;
+    font-size: calc(10px + 15vw);
+    line-height: 0%;
+    animation: glitch 1s linear infinite;
+}
+
+.main-1-p2{
+    padding-left: 8.5%;
+    color: whitesmoke;
+    font-family: second;
+    font-size: calc(10px + 1.3vh);
+    transition: .8s;
+    padding-right: 8%;
+    font-size: calc(10px + 1.3vw);
+}
+
+.codegenerate{
+    min-height: 100%;
+    display: flex;
+    transition: 1.2s;
+    display: flex;
+    padding: 2px 2px 2px 2px;
+    background: #16161D;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: soft-light;
+    background-size: cover;
+}
+
+.codegenerate-1{
+    background: transparent;
+    border-radius: 9px;
+    transition: .8s;
+    width: 65%;
+    height: 700%;
+    padding-bottom: 2%;
+    margin: auto;
+}
+
+#serial{
+    color: whitesmoke; /*Match color*/
+    font-family: first;
+    font-size: calc(10px + 9vh);
+    font-size: calc(10px + 5vw);
+    transition: .8s;
+    margin-bottom: -1%;
+}
+
+.part-11{
+    min-height: 100%;
+    display: flex;
+    transition: 1.2s;
+    display: flex;
+    padding: 2px 2px 2px 2px;
+    background: #16161D;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: soft-light;
+    background-size: cover;
+}
+
+.part-11-h1{
+    padding-left: 8%;
+    color: whitesmoke; /*Match color*/
+    font-family: first;
+    font-size: calc(10px + 9vh);
+    font-size: calc(10px + 5vw);
+    transition: .8s;
+    /*margin-bottom: 2%;*/
+    margin-top: 8%;
+    line-height: 65%;
+}
+
+.part-11-1{
+    background: transparent;
+    border-radius: 9px;
+    transition: .8s;
+    width: 65%;
+    height: 700%;
+    padding-bottom: 2%;
+    margin: auto;
+}
+
+.part-11-1-p1{
+    padding-left: 0%;
+    margin-top: -4%;
+    color: whitesmoke;
+    font-family: tfw;
+    font-size: calc(10px + 1.3vh);
+    transition: .8s;
+    padding-right: 3%;
+    font-size: calc(10px + 1.0vw);
+    line-height: 85%;
+}
+
+.part-11-1-p2{
+    padding-left: 0%;
+    margin-top: -5%;
+    color: #E3242B;
+    font-family: tfw;
+    font-size: calc(10px + 1.3vh);
+    transition: .8s;
+    padding-right: 0%;
+    font-size: calc(10px + 1.0vw);
+}
+
+.part-11-h2{
+    color: #E3242B; /*Match color*/
+    font-family: nm;
+    font-size: calc(10px + 6vh);
+    font-size: calc(10px + 3.7vw);
+    transition: .8s;
+    /*margin-bottom: 2%;*/
+}
+
+.fb-button{
+    color: white;
+    background: #FF8B01;
+}
+
+#fb{
+    background: #dddddd;
+}
+
+.part-12-1-p1{
+    padding-left: 6%;
+    margin-top: -4%;
+    color: whitesmoke;
+    font-family: second;
+    font-size: calc(10px + 1.3vh);
+    transition: .8s;
+    padding-right: 3%;
+    font-size: calc(10px + 0.5vw);
+    line-height: 85%;
+}
+
+.part-12-1-p1:hover{
+    color: #E65C9C;
+}
+
+@keyframes glitch{
+  2%,64%{
+    transform: translate(2px,0) skew(0deg);
+  }
+  4%,60%{
+    transform: translate(-2px,0) skew(0deg);
+  }
+  62%{
+    transform: translate(0,0) skew(5deg); 
+  }
+}
+
+#choices{
+    width: calc(10px + 41vw);
+}
+
+table, th, td {
+    border:1px solid whitesmoke;
+    border-collapse: collapse;
+    padding: 5px;
+    color: whitesmoke;
+    font-family: tfw;
+    font-size: calc(10px + 1.3vh);  
+}
+
+input[type='text']{
+    width: calc(10px + 40vw);
+}
+
+input[type='text'], input[type='date'], input[type='number'], select, textarea{
+    border: 1px solid #16161D;
+    border-radius: 4px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    padding: 7px 7px 7px 7px;
+    font-family: tfw;
+    background: #1b1b1b;
+    cursor: url(Typing.gif), default;
+    color: whitesmoke;
+}
+
+input[type=text]:focus, input[type='date']:focus, input[type='number']:focus, select:focus, textarea:focus{
+    background-color: #CCCCCC;
+    border: 1px solid #808080;
+    box-shadow: 0 0 5px #487748;
+    color: #010203;
+}
+
+textarea{
+    resize: none;
+    width: calc(10px + 55vw);
+    padding: 12px 20px;
+    border-radius: 3px;
+    height: 150px;
+}
+
+button{
+    padding: 12px 20px;
+    border-radius: 3px;
+    height: 13%;
+    font-family: tfw;
+    background-color: #444444;
+    border: none;
+    cursor: url(Pick.gif), default;
+}
+
+button:hover{
+    background-color: #CCCCCC;
+    border: 1px solid #808080;
+    box-shadow: 0 0 2px #487748;
+    color: #010203;
+}

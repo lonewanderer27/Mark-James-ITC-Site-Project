@@ -1,0 +1,294 @@
+/*Part 1 - THE BODY & FONT*/
+
+body{
+    margin: 0;
+    padding: 0; 
+    -webkit-font-smoothing: antialiased;
+    font-size: 100%;
+    transition: 1.2s;
+    background: linear-gradient(180deg, #FFa500, #0C69DF);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: soft-light;
+    background-size: cover;
+    cursor: url(CustomCursorbyMark.gif), default;
+}
+
+::selection {
+  color: whitesmoke;
+  background: #FF2400;
+}
+
+@font-face {
+    font-family: 'tfw';
+    src: url(TheFontWonder.otf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'ay';
+    src: url(awyeah.ttf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'jpn';
+    src: url(nicokaku_v1.ttf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'nm';
+    src: url(NightMachine.otf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'first';
+    src: url(Thedus-Wide.otf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'second';
+    src: url(Thedus-CondensedLight.otf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'yah2';
+    src: url(yah2.otf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'tfw';
+    src: url(TheFontWonder.otf);
+    font-weight: 100;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+/*Part 2 - THE NAVIGATION BAR*/
+
+nav{
+    background: transparent;
+    height: 10%;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .5s;
+    padding: -20px 10px;
+    z-index: 100000;
+}
+
+nav a{
+    color: whitesmoke;
+    font-size: calc(10px + 1.6vh);
+    padding: 7px 50px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: first;
+    transition: 0.8;
+    cursor: url(Pick.gif), default;
+}
+
+nav ul{
+    float: right;
+    margin-right: 10px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    cursor: url(Pick.gif), default;
+}
+
+.hover.active,.hover:hover{
+    background: whitesmoke;
+    transition: .5s;
+    color: #E3242B;
+}
+
+nav ul li a{
+    text-decoration: none;
+}
+
+.burger{
+    display: none;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: whitesmoke;
+    margin: 5px;
+}
+
+#hover.active,#hover:hover{
+    background: repeating-linear-gradient(-45deg, #355C7D 0%, #6C5B7B 20%, #6C5B7B 40%, #C06C84 60%, #F67280 80%, #F8B195 100%);
+    background-size: 400vh 400vh;
+    animation: slide 6s linear infinite forwards;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    transition: 0.8;
+}
+
+@media screen and (max-width: 920px){
+    nav ul li{
+        display: none;
+    }
+}
+
+@keyframes slide{
+    0%{
+        background-position-x: 0%;
+    }
+
+    100%{
+        background-position-x: 500vh;
+    }
+}
+
+/*Part 3 - HOME*/
+
+h4{
+  margin: 5px 30px;
+  font-family: 'ay';
+  color: whitesmoke;
+  font-size: 15px;
+}
+  
+span{
+  float: right;
+  margin-right: 10px;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+hr{
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+}
+
+.comment-box{
+  width: 85%;
+  margin-top: 50px;
+  background: #16161D;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+p{
+  margin: 0 30px 15px;
+  font-weight: 300;
+  color: #16161d;
+  word-wrap: break-word;
+  background: #FFA500;
+  padding: 5px 10px;
+  font-size: 18px;
+  font-family: ay;
+}
+
+.reminder{
+    margin: 13px 20px;
+    font-weight: 300;
+    color: whitesmoke;
+    background: none;
+    font-size: 15px;
+}
+  
+.header{
+  margin: 15px 20px;
+  font-size: 27px;
+  font-weight: 600;
+  font-family: ay;
+  color: whitesmoke;
+}  
+
+form{
+  margin: 10px 10px 30px 10px;
+  ::-webkit-input-placeholder{
+    color: #CCC;
+    font-weight: 300;
+  }
+}
+  
+input[type="text"], textarea{
+  margin: 5px 10px;
+  outline: none;
+  background: #1b1b1b;
+  border: 0;
+  padding: 10px;
+  font-family: tfw;
+  color: whitesmoke;
+  transition: 0.5s;
+  cursor: url(Typing.gif), default;
+}
+      
+textarea{
+  resize: none;
+  width: 85%;
+}
+  
+input[type="text"]{
+  width: 50%;
+  margin-bottom: 15px;
+}
+
+input[type="text"]:focus{
+  background: #ccc;
+  color: #16161d;
+}
+
+textarea:focus{
+  background: #ccc;
+  color: #16161d;
+}
+
+button{
+  font-weight: 400;
+  margin: 12px 0 0 10px;
+  border: 0;
+  color: #fff;
+  font-size: 15px;
+  background: #0C69DF;
+  padding: 12px 20px 12px 20px;
+  text-decoration: none;
+  outline: none;
+  transition: all .2s ease;
+  font-family: 'tfw';
+  cursor: url(Pick.gif), default;
+}
+  
+button:hover{
+  background: #084695;
+}
+  
+.footer p{
+  float: right
+  font-size: 13px;
+  margin-bottom: 10px;
+  background: #FFF;
+}
+
+#comments{
+    font-family: tfw;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMMENT YOUR THOUGHTS - eCommerce Website [Intro to Computing by Mark James]</title>
+    <link rel="stylesheet" href="comment.css">
+    <!--THE STYLE.CSS IS FOR THIS HTML FILE-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
+    <script src="comment.js"></script>
+</head>
+<body>
+	<nav>
+        <a href="index.html" class="ihms-navbar" id="hover"><h1 class="ihms-navbar-h1">KAIJU</h1></a>
+        <ul>
+        	<li><a href="product.html" class="hover">PRODUCTS</a></li>
+            <li><a href="about.html" class="hover">ABOUT</a></li>
+            <li><a href="SHOP.html" class="hover">SHOP</a></li>
+        </ul>
+        <div class="burger">
+        	<div class="line1"></div>
+        	<div class="line2"></div>
+        	<div class="line3"></div>
+        </div>
+    </nav>
+
+    <div class="container">
+    <div class="comment-box">
+      <div class="comment-form">
+        <div class="header">TYPE YOUR COMMENT!</div>
+        <p class="reminder">Kindly comment appropriately. Don't use bad words... because they are bad.</p>
+        <form action="#" onsubmit="event.preventDefault(); postComment()">
+          <div> 
+            <input type="text" id="name" placeholder="Name"/>
+          </div>
+          <div>
+            <textarea id="comment" rows="3" cols="30" placeholder="Comment" oninput="editReview()"></textarea>
+          </div>
+          <button type="submit" name="submitcomment">COMMENT</button>
+        </form>  
+      </div>
+      <div>
+        <h4 class="header">Comments</h4>
+        <div id="comments"></div>
+      </div>
+
+      <script>
+        function editReview(){
+          const textarea = document.getElementById('comment');
+
+          let badwords = /fuck|shit|goddamn|dick|asshole|bastard|basterd|bitch|twat|cunt|wank|wanker|slut|sex|gago|amputa|animal ka|bilat|binibrocha|bobo|bogo|boto|brocha|burat|bwesit|bwisit|demonyo ka|engot|etits|gaga|gagi|habal|hayop ka|hayup|hinampak|hinayupak|hindot|hindutan|hudas|iniyot|inutel|inutil|iyot|kagaguhan|kagang|kantot|kantotan|kantut|kantutan|kaululan|kayat|kiki|kikinginamo|kingina|kupal|leche|leching|lechugas|lintik|nakakaburat|nimal|ogag|olok|pakingshet|pakshet|pakyu|pesteng yawa|pokpok|poyet|puchanggala|puyet|ratbu|shunga|sira ulo|siraulo|tae|taena|tamod|tanga|tangina|tarantado|teti|timang|tinil|tungaw|puke|pucha|puchangina|pukinangina|puking|punyeta|puta|putang|putang ina|putangina|putanginamo|putaragis|putragis|pota|suso|sosu|taragis|titi|ulol|ungas|yawa/gi;
+          let comment1 = textarea.value;
+          let comment2 = comment1.replace(badwords, '****');
+          document.getElementById('comment').value = comment2;
+        }
+        document.getElementById('submitcomment').addEventListener('click', editReview);
+      </script>
+    </div>
+  </div>
+</body>
+</html>
